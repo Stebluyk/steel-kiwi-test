@@ -6,7 +6,7 @@ Categories
 {% block content %}
  <h1>Categories</h1>
     {% for category in categories %}
-        <h4>{{ category.name }}</h4>
+        <h4><a href="{% url 'category_detail' category.slug %}">{{ category.name }}</a></h4>
         <pre>{{ category.description }}</pre>
     {% endfor %}
 {% endblock %}

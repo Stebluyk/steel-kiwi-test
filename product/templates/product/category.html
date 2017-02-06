@@ -1,0 +1,17 @@
+{% extends 'product/base.html' %}
+
+{% block title %}
+{{ category.name }}
+{% endblock %}
+
+{% block content %}
+
+	{% for category in categories %}
+	    <h1>{{ category.name }}</h1>
+    	<h2>{{ category.price }}</h2>
+   	    <pre>{{ category.description }}</pre>
+	{% endfor %}
+
+
+
+{% endblock %}

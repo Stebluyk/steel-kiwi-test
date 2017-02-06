@@ -17,12 +17,13 @@ from django.conf.urls import url
 from django.contrib import admin
 
 
-from product.views import products, home, categories, show_product
+from product.views import products, home, categories, show_product, show_category
 
 urlpatterns = [
     url(r'^$',home,name='home' ),
     url(r'^products/',products,name='products' ),
     url(r'^categories/',categories,name='categories' ),
-    #url(r'^product/(?P<product_slug>[a-z0-9]+)/$',show_product,name='product'),
-    url(r'^product(?P<product_slug>[-\w\d]+)/$', show_product, name='product')
+    url(r'^product/(?P<product_slug>[\w-]+)/$', show_product, name='product_detail'),
+    url(r'^category/(?P<category_slug>[\w-]+)/$', show_category, name='category_detail')#,
+    #url(r'^category/(?P<category_slug>[\w-]+)/(?P<product_slug>[\w-]+)/$', show_category, show_product, name='product_detail')
 ]

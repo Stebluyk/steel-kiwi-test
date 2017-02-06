@@ -1,13 +1,17 @@
 {% extends 'product/base.html' %}
 
 {% block title %}
-{{ Product.name }}
+{{ product.name }}
 {% endblock %}
 
 {% block content %}
 
-    <h1>{{ Product.name }}</h1>
-    <pre>{{ Product.description }}</pre>
+    <h1><a href="{% url 'product_detail' product.slug %}">{{ product.name }}</a></h1>
+    <h2>{{ product.price }}</h2>
+    <pre>{{ product.description }}</pre>
+	<p>Created at:{{ product.created_at }}</p>
+    <p>Modified at:{{ product.modified_at }}</p>
+
 
 
 {% endblock %}
