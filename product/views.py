@@ -43,6 +43,6 @@ def show_product(request, product_slug):
 def show_category(request, category_slug):
     product = get_object_or_404(Category, slug=category_slug)
     context = {
-        'category': category
+        'category': category.slug
     }
     return render(request,'product/category.html', context)

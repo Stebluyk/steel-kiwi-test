@@ -24,6 +24,12 @@ urlpatterns = [
     url(r'^products/',products,name='products' ),
     url(r'^categories/',categories,name='categories' ),
     url(r'^product/(?P<product_slug>[\w-]+)/$', show_product, name='product_detail'),
-    url(r'^category/(?P<category_slug>[\w-]+)/$', show_category, name='category_detail')#,
-    #url(r'^category/(?P<category_slug>[\w-]+)/(?P<product_slug>[\w-]+)/$', show_category, show_product, name='product_detail')
+    url(r'^category/(?P<category_slug>[\w-]+)/$', show_category, name='category_detail'),
+    url(r'^category/(?P<category_slug>[\w-]+)/(?P<product_slug>[\w-]+)/$', show_product, name='product_detail')
+
+    
+    # url(r'^category/(?P<category_slug>[\w-]+)/(?P<product_slug>[\w-]+)/$', show_product, name='product_detail'),
+    # url(r'^category/(?P<category_slug>[\w-]+)/$', show_category, name='category_detail'),
+    # url(r'^product/(?P<category_slug>[\w-]+)/(?P<product_slug>[\w-]+)/$', show_category, name='product_detail'),
+    # url(r'^product/(?P<product_slug>[\w-]+)/$', show_product, name='product_detail'),
 ]

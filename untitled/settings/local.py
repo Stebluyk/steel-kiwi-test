@@ -25,6 +25,10 @@ SECRET_KEY = 'lnm9d)e#06hhccc&-#_wcd1#mtc$gnsp=@7upqbws@v!$wbmdj'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+CONFIG_TYPE = 'prod'
+
+if CONFIG_TYPE == 'prod':
+    from setting.local import *
 ALLOWED_HOSTS = []
 
 
