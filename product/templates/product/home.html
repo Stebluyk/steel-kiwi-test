@@ -6,14 +6,7 @@ Home
 {% block content %}
 
     <h1>Home</h1>
-    <h2><a href="{% url 'products' %}">Products</a></h2>
-    {% for product in products %}
 
-        <h3><a href="{% url 'product_detail' product.slug %}"> {{ product.name }}</a></h3>
-        <h4>{{ product.price }}</h4>
-        <pre>{{ product.description }}</pre>
-
-    {% endfor %}
     <h2><a href="{% url 'categories' %}">Categories</a></h2>
     {% for category in categories %}
         <h3><a href="{% url 'category_detail' category.slug %}">{{ category.name }}</a></h3>
